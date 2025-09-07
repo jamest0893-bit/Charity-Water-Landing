@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water Campaign</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('data:image/jpeg;base64,[BASE64_IMAGE_1]') no-repeat center center / cover;
+      color: white;
+      text-align: center;
+      transition: background-image 0.5s ease;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 60px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .branding-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .branding-logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      border-radius: 8px;
+      position: absolute;
+      top: 50px;
+      right: 0;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 0;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-container:hover .nav-menu {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cta-button {
+      background-color: #0077c2;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      position: relative;
+    }
+
+    .cta-button:hover {
+      background-color: #005fa3;
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 0.9em;
+      display: none;
+      white-space: nowrap;
+      color: white;
+    }
+
+    .give-button:hover .give-tooltip {
+      display: block;
+    }
+
+    .follow-button:hover .follow-tooltip {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .follow-tooltip img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+    }
+
+    .follow-button:hover ~ body {
+      background-image: url('data:image/jpeg;base64,[BASE64_IMAGE_2]');
+    }
+  </style>
+</head>
+<body>
+  <div class="branding-logo">
+    <img src="data:image/png;base64,[BASE64_LOGO]" alt="Charity: Water Logo" />
+  </div>
+
+  <div class="nav-container">
+    <img src="data:image/png;base64,[BASE64_JERRYCAN]" alt="Menu" class="menu-icon" />
+    <div class="nav-menu">
+      <a href="#home">Home</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#partners">Our Partners</a>
+    </div>
+  </div>
+
+  <div class="overlay">
+    <h1>Give Water. Watch it Change Everything.</h1>
+    <p>Follow the impact on TikTok and Instagram as your support turns hope into health for communities in need.</p>
+    <div class="button-group">
+      <div class="give-button">
+        <a href="https://www.charitywater.org" class="cta-button">Give Water</a>
+        <div class="tooltip give-tooltip">Donate with CashApp, Venmo, or Credit Card</div>
+      </div>
+      <div class="follow-button">
+        <a href="https://www.instagram.com/charitywater" class="cta-button">Follow the Change</a>
+        <div class="tooltip follow-tooltip">
+          <img src="data:image/png;base64,[BASE64_TWITTER]" alt="Twitter/X" />
+          <img src="data:image/png;base64,[BASE64_INSTAGRAM]" alt="Instagram" />
+          <img src="data:image/png;base64,[BASE64_TIKTOK]" alt="TikTok" />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
